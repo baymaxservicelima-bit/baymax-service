@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0b1220;
+    color: white;
+}
+
+/* NAV */
+header {
+    position: fixed;
+    width: 100%;
+    background: #111827;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 500px;
+    width: auto;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.logo:hover{
+    transform: scale(1.55);
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('images/taller.jpg') center/cover;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero p {
+    margin: 10px 0 20px;
+    color: #cbd5e1;
+}
+
+.btn {
+    background: #f59e0b;
+    padding: 12px 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* SECCIONES */
+.section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.section.dark {
+    background: #111827;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.card, .brand {
+    background: #1f2937;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover, .brand:hover {
+    background: #f59e0b;
+    color: black;
+}
+
+/* LOGO AJUSTE (IMPORTANTE) */
+.logo {
+    height: 40px;
+    object-fit: contain;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: #1f2937;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    text-align: left;
+    border-left: 4px solid #f59e0b;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.service-card p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    background: #111827;
+}
+.icon {
+    font-size: 35px;
+    color: #f59e0b;
+    margin-bottom: 10px;
+}
+
+.service-card {
+    text-align: left;
+}
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section.dark {
+    background: #0f172a;
+}
+
+.service-card {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: 0.3s;
+}
+
+/* Línea animada abajo */
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #f59e0b;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #f59e0b;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+.brands-wrapper {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+
+    /* 🔥 caja premium */
+    background: #ffffff;
+
+    padding: 35px;
+    border-radius: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* sombra más elegante */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+
+    /* borde tipo tarjeta industrial */
+    border: 1px solid #e5e7eb;
+
+    /* 🔥 esto devuelve la “caja visual” */
+    position: relative;
+}
+
+/* efecto de marco interno pro */
+.brands-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.05);
+    pointer-events: none;
+}
+
+.brands-wrapper img {
+    width: 100%;
+    max-width: 1000px;
+    object-fit: contain;
+
+    padding: 10px;
+    z-index: 1;
+}
+html {
+    scroll-behavior: smooth;
+}
+.contact-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* FORMULARIO */
+.contact-form {
+    background: #111827;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: #1f2937;
+    color: white;
+}
+
+.contact-form button {
+    background: #f59e0b;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    transform: scale(1.05);
+}
+
+/* INFO */
+.contact-info {
+    background: #1f2937;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    margin-top: 15px;
+    background: #25D366;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.contact-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+/* formulario */
+.contact-form {
+    background: #111827;
+    padding: 20px;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #1f2937;
+    color: white;
+}
+
+/* mapa */
+.contact-map {
+    height: 100%;
+    min-height: 320px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-map {
+        min-height: 250px;
+    }
+}
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border-radius: 12px;
+}
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* 🔥 fondo industrial */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('images/hero.jpg');
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: #25D366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.05);
+}
+
+.wa-icon {
+    width: 22px;
+    height: 22px;
+}
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.05);
+}
+
+.wa-icon {
+    width: 22px;
+    height: 22px;
+}
+.why-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.why-image img {
+    width: 90%;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+.why-hero {
+    height: auto;
+    padding: 100px 20px;
+
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("images/porque.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    text-align: center;
+}
+
+.why-content {
+    max-width: 1100px;
+    margin: auto;
+}

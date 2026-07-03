@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baymax Service S.A.C.</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAV -->
+<header>
+    <div class="nav">
+        <img src="images/logo.png" class="logo">
+
+ <div class="menu">
+
+    <a href="#hero">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#marcas">Marcas</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+
+</div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Reparación Profesional de Máquinas de Soldar</h1>
+
+        <p>
+            Especialistas en equipos MIG, TIG y MMA.<br>
+            Diagnóstico electrónico, mantenimiento y reparación industrial.
+        </p>
+
+        <div class="hero-buttons">
+
+    <a href="https://wa.me/51926506458" target="_blank" class="btn-whatsapp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="wa-icon">
+    Cotizar por WhatsApp
+</a>
+
+            <a href="#servicios" class="btn-secondary">
+                Ver Servicios
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICIOS -->
+<section id="porque" class="why-hero">
+
+    <div class="why-content">
+
+        <h2>¿Por qué elegir Baymax Service?</h2>
+
+        <div class="services">
+
+        <div class="service-card">
+            <i class="fa-solid fa-award icon"></i>
+            <h3>Experiencia Técnica</h3>
+            <p>Años de experiencia en reparación de equipos industriales de soldadura.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-shield-halved icon"></i>
+            <h3>Garantía de Servicio</h3>
+            <p>Todos nuestros trabajos cuentan con garantía y soporte técnico.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-clock icon"></i>
+            <h3>Respuesta Rápida</h3>
+            <p>Atención rápida para minimizar tiempos de parada en producción.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-screwdriver-wrench icon"></i>
+            <h3>Técnicos Especializados</h3>
+            <p>Personal capacitado en electrónica industrial y soldadura avanzada.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="servicios" class="section">
+
+
+    <section id="servicios" class="section">
+
+    <h2>Servicios Especializados</h2>
+
+    <div class="services">
+
+        <div class="service-card">
+            <i class="fa-solid fa-screwdriver-wrench icon"></i>
+            <h3>Reparación de Equipos</h3>
+            <p>Mantenimiento y reparación de máquinas de soldar industriales MIG, TIG y MMA.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-gears icon"></i>
+            <h3>Mantenimiento Preventivo</h3>
+            <p>Revisión completa de sistemas electrónicos y mecánicos para evitar fallas.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-bolt icon"></i>
+            <h3>Diagnóstico Electrónico</h3>
+            <p>Detección avanzada de fallas en tarjetas, IGBT, drivers y fuentes de poder.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-industry icon"></i>
+            <h3>Servicio Industrial</h3>
+            <p>Atención a empresas, talleres e industrias con soporte técnico especializado.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-truck icon"></i>
+            <h3>Soporte en Campo</h3>
+            <p>Servicio técnico directo en planta o instalaciones del cliente.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MARCAS -->
+<section id="marcas" class="section dark">
+    <h2>Marcas</h2>
+
+    <section class="section dark">
+
+    <h2>Marcas que Trabajamos</h2>
+
+    <div class="brands-wrapper">
+        <img src="images/logos.png" alt="Marcas que reparamos">
+    </div>
+
+</section>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/51926506458" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+<script>
+function enviarWhatsApp(event){
+    event.preventDefault();
+
+    let nombre = document.getElementById("nombre").value;
+    let empresa = document.getElementById("empresa").value;
+    let celular = document.getElementById("celular").value;
+    let mensaje = document.getElementById("mensaje").value;
+
+    let texto = 
+`Hola Baymax Service 👋
+
+Nombre: ${nombre}
+Empresa: ${empresa}
+Celular: ${celular}
+
+Mensaje:
+${mensaje}`;
+
+    let url = "https://wa.me/51926506458?text=" + encodeURIComponent(texto);
+
+    window.open(url, "_blank");
+}
+</script>
+</body>
+</html>
+<section id="contacto" class="section">
+<section id="contacto" class="section dark">
+
+    <h2>Contacto</h2>
+
+    <p>Escríbenos o ubícanos en el mapa</p>
+
+    <div class="contact-container">
+
+        <!-- FORMULARIO -->
+        <form class="contact-form" onsubmit="enviarWhatsApp(event)">
+
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <input type="text" id="empresa" placeholder="Empresa (opcional)">
+            <input type="tel" id="celular" placeholder="Celular / WhatsApp" required>
+            <textarea id="mensaje" placeholder="Describe tu problema..." rows="5"></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+
+        </form>
+
+        <!-- MAPA -->
+        <div class="contact-map">
+
+       <iframe
+    src="https://www.google.com/maps?q=-12.3077202,-76.8375889&z=17&output=embed"
+    width="100%"
+    height="320"
+    style="border:0; border-radius:10px;"
+    loading="lazy"
+    allowfullscreen>
+</iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+</section>
